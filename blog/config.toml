@@ -1,0 +1,44 @@
+baseurl = "/"
+title = "opticpow.io"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+[Author]
+    name = "Wayne Ingram"
+    bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+    avatar = "img/avatar.png"
+
+
+[Params]
+    subtitle = "Just another technology site" # Subtitle of your site
+    description = " Wayne's Personal blog about anything & everything" # Description of your site
+    opengraph = true
+    readmore = true # Show "Read more" button in list if true
+    leftsidebar = false # Move sidebar to the left side if true
+    authorbox = false
+    post_navigation = true
+    postSections = ["post"]
+
+
+[Params.widgets]
+    search = true # Enable "Search" widget
+    recent_articles = true # Enable "Recent arcticles" widget
+    categories = true # Enable "Categories" widget
+    tags = true # Enable "Tags" widget
+    tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
+
+    # Enable "Social" widget, if any of "social_*" set a value
+    social_twitter = "opticpow"
+    social_linkedin = "waynei"
+    social_github = "opticpow"
+    social_email = "blog@opticpow.io"
+
+[[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "home"
+    url = "/"
