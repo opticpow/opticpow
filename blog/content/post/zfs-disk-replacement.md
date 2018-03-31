@@ -1,7 +1,7 @@
 ---
 title: "ZFS Disk Replacement"
-date: 2018-02-16
-draft: true
+date: 2018-03-31
+draft: false
 categories: ["technology"]
 tags: ["storage","linux","zfs"]
 ---
