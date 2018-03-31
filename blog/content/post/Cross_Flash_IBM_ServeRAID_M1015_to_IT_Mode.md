@@ -58,7 +58,7 @@ There are only a few steps to change your firmware. The ROM is only really requi
     sas2flsh -o -sasadd 500605b0xxxxxxxx
     ```
 
-One that is complete, the card is ready to host your disks for your ZFS filesystem.
+Once that is complete, the card is ready to host your disks for your ZFS filesystem.
 
 ### References
 * https://forums.laptopvideo2go.com/topic/29059-sas2008-lsi92409211-firmware-files
