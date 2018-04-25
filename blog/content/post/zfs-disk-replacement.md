@@ -2,14 +2,16 @@
 title: "ZFS Disk Replacement"
 date: 2018-03-31
 draft: false
-categories: ["technology"]
+categories: ["Infrastructure"]
 tags: ["storage","linux","zfs"]
+draft: false
+thumbnail: "/images/2018/03/hdd-2577403_640.jpg"
 ---
 
 An important part of setting up a new storage array is testing how to recover from common failure scenarios. This is the procedure to replace a failed drive. Documented here for a time when I might need to use the procedure in anger.
 
 A `zpool status` showing the failed drive:
-```
+```terminal
 root@thor:/home/wayne# zpool status tank
   pool: tank
  state: DEGRADED
@@ -37,7 +39,7 @@ Offline the drive using it's device identifier
 `zpool offline tank /dev/disk/by-id/ata-ST2000DL003-9VT166_5YD36W2A`
 Below is the status of the pool after offlining the drive:
 
-```
+```termainal
 root@thor:/home/wayne# zpool status tank
   pool: tank
  state: DEGRADED
@@ -64,7 +66,7 @@ The drive can now be physically removed and replaced with a new drive. If you ha
 
 This array uses device ids to avoid name changes, so the new device name needs to be worked out by checking the contents of the `/dev/disk/by-id` directory:
 
-```
+```terminal
 root@thor:/home/wayne# ll /dev/disk/by-id/ | grep ata | grep -v part
 lrwxrwxrwx 1 root root    9 Mar 31 09:35 ata-ST3250310AS_5RY0DTZN -> ../../sda
 lrwxrwxrwx 1 root root    9 Mar 31 09:35 ata-ST2000DL003-9VT166_5YD36NY9 -> ../../sdc
@@ -76,11 +78,11 @@ lrwxrwxrwx 1 root root    9 Mar 31 09:35 ata-ST2000DM001-1CH164_S1E1PXRY -> ../.
 ```
 Comparing the above output with the pool output, it can be seen that the new disk has the id `ata-ST2000DM001-1CH164_S1E1PXRY`. Replacing the drive requires specifying the removed drive, and the new drive it's replacing:
 
-```
+```termainal
 root@thor:/home/wayne# zpool replace tank /dev/disk/by-id/ata-ST2000DL003-9VT166_5YD36W2A /dev/disk/by-id/ata-ST2000DM001-1CH164_S1E1PXRY
 ```
 Upon success, the status now shows the rebuild or resilvering process that will replace the drive:
-```
+```terminal
 root@thor:/home/wayne# zpool status tank
   pool: tank
  state: DEGRADED

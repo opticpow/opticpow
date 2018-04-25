@@ -2,11 +2,11 @@
 title: "Flashing IT Firmware to the IBM-ServeRAID-M1015 SAS HBA"
 date: 2018-02-11
 draft: false
-#thumbnail: "/images/fulls/IBM-ServeRAID-M1015.jpg"
-categories: ["technology"]
+categories: ["Infrastructure"]
 tags: ["storage","linux","m1015"]
+thumbnail: "/images/2018/02/IBM-ServeRAID-M1015.jpg"
 ---
-![image](/images/fulls/IBM-ServeRAID-M1015.jpg)
+![](/images/fulls/IBM-ServeRAID-M1015.jpg)
 The IBM M1015 is the go to Host Bus Adapter (HBA) for enthusiasts wanting a reliable and reasonably priced HBA for systems using advanced filesystems such as ZFS. I acquired a number of these cards for my file-server upgrade. I needed cards to support my new [Norco RPC-4224 Chassis](http://www.norcotek.com/product/rpc-4224/). There is a lot of discussion on line about these cards, and re-flashing them to remove the boot & raid firmware. They are easily acquired on eBay for a reasonable cost with a little searching. I have now done this on three cards and not had any issues, however your mileage may vary.
 
 ## Removing the IBM M1015 firmware
@@ -16,7 +16,7 @@ The IBM M1015 is the go to Host Bus Adapter (HBA) for enthusiasts wanting a reli
 4. Boot from the key
 5. Run the following commands to remove the IBM identity to allow it be be flashed with the LSI tools:
 
-    ```
+    ```terminal
     megarec -writesbr 0 sbrempty.bin
     megarec -cleanflash 0
     ```
@@ -38,23 +38,23 @@ There are only a few steps to change your firmware. The ROM is only really requi
 
 1. Erase the existing firmware
 
-    ```
+    ```terminal
     sas2flash.efi -o -e -6
     ```
 2. Flash the new firmware
 
     To Flash **without** the optionROM:
 
-    ```
+    ```terminal
     sas2flash.efi -o -f 2118it.bin
     ```
     With the optionROM:
 
-    ```
+    ```terminal
     sas2flash.efi -o -f 2118it.bin -b mptsas2.rom
     ```
 3. Grab the SAS address off the card, it's on the back on a green sticker (ie 500605B0xxxxxxxx)
-    ```
+    ```terminal
     sas2flsh -o -sasadd 500605b0xxxxxxxx
     ```
 

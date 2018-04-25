@@ -23,6 +23,8 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   config.vm.network "forwarded_port", guest: 1313, host: 1313
+  config.vm.network "forwarded_port", guest: 80, host: 80
+  config.vm.network "forwarded_port", guest: 443, host: 443
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -42,7 +44,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "~/.aws", "/home/vagrant/.aws",
     type: "virtualbox",
     mount_options: ["dmode=700,fmode=600"]
-    
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:

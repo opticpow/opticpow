@@ -5,6 +5,7 @@ paginate = "10" # Number of posts per page
 theme = "mainroad"
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "UA-114030941-1" # Enable Google Analytics by entering your tracking id
+pygmentsCodeFences = true
 
 [Author]
     name = "Wayne Ingram"
@@ -13,7 +14,7 @@ googleAnalytics = "UA-114030941-1" # Enable Google Analytics by entering your tr
 
 
 [Params]
-    subtitle = "Just another technology site" # Subtitle of your site
+    subtitle = "Just another technology blog" # Subtitle of your site
     description = " Wayne's Personal blog about anything & everything" # Description of your site
     opengraph = true
     readmore = true # Show "Read more" button in list if true
