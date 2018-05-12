@@ -1,1 +1,4 @@
 
+[submodule "blog/themes/mainroad"]
+	path = blog/themes/mainroad
+	url = git@github.com:opticpow/Mainroad.git
