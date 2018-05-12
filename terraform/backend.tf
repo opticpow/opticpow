@@ -3,6 +3,7 @@ terraform {
     bucket  = "opticpow-terraform"
     key     = "blog"
     region  = "ap-southeast-2"
+    profile = "personal"
   }
 }
 
