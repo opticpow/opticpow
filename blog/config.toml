@@ -33,7 +33,7 @@ pygmentsCodeFences = true
 
     # Enable "Social" widget, if any of "social_*" set a value
     social_twitter = "opticpow"
-    social_linkedin = "waynei"
+    social_linkedin = "opticpow"
     social_github = "opticpow"
     social_email = "blog@opticpow.io"
 

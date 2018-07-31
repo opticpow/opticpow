@@ -29,6 +29,15 @@ resource "aws_route53_record" "opticpow_io_mx" {
   ]
 }
 
+# Required by keybase for identity
+resource "aws_route53_record" "opticpow_io_keybase" {
+  zone_id = "${aws_route53_zone.opticpow_io.zone_id}"
+  name    = "@"
+  type    = "TXT"
+  ttl     = "${var.ttl}"
+  records = ["keybase-site-verification=LlO9X40NbjhxqIQ11M94ARHwuXOw1xXfaw7qM6Obd3w"]
+}
+
 # Website
 resource "aws_route53_record" "opticpow_io_website" {
   zone_id = "${aws_route53_zone.opticpow_io.zone_id}"
@@ -175,4 +184,43 @@ resource "aws_route53_record" "ingram_net_au_love" {
   type    = "CNAME"
   ttl     = "${var.ttl}"
   records = ["ingram.net.au"]
+}
+
+################################################################################
+#
+# ingramsensei Domain
+#
+resource "aws_route53_zone" "ingramsensei_com" {
+  name = "ingramsensei.com."
+}
+
+# Required by Google for Domain Ownership Proof in Gmail
+resource "aws_route53_record" "ingramsensei_com_google" {
+  zone_id = "${aws_route53_zone.ingramsensei_com.zone_id}"
+  name    = "ingramsensei.com."
+  type    = "TXT"
+  ttl     = "${var.ttl}"
+  records = ["google-site-verification=YCEbhH27GTxF8PExknPdbvpXOPkfQ_mxfEG0prU0ysA"]
+}
+
+resource "aws_route53_record" "ingramsensei_com_mx" {
+  zone_id = "${aws_route53_zone.ingramsensei_com.zone_id}"
+  name    = ""
+  type    = "MX"
+  ttl     = "${var.ttl}"
+  records = [
+    "1 aspmx.l.google.com",
+    "5 alt1.aspmx.l.google.com",
+    "5 alt2.aspmx.l.google.com",
+    "10 alt3.aspmx.l.google.com",
+    "10 alt4.aspmx.l.google.com"
+  ]
+}
+
+resource "aws_route53_record" "ingramsensei_com_apex" {
+  zone_id = "${aws_route53_zone.ingramsensei_com.zone_id}"
+  name    = "ingramsensei.com."
+  type    = "A"
+  ttl     = "${var.ttl}"
+  records = ["13.54.141.219"]
 }
