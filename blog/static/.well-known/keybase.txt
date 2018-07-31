@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/opticpow
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://opticpow.io
+  * I am opticpow (https://keybase.io/opticpow) on keybase.
+  * I have a public key with fingerprint 93EF 7A1E 8898 517A 5CC6  FA8D BF0C CF14 7538 6112
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120544edc7ecfcca78f5124e473e7270d0c226186991153eaf18ea96643bf2d12ff0a",
+      "fingerprint": "93ef7a1e8898517a5cc6fa8dbf0ccf1475386112",
+      "host": "keybase.io",
+      "key_id": "bf0ccf1475386112",
+      "kid": "0101ffa3ffb6120a3464da33799576ff0806fd0bde9c048d98bcfc87f1e4edccbed00a",
+      "uid": "740c099744806f885bd702562b22ea19",
+      "username": "opticpow"
+    },
+    "service": {
+      "hostname": "opticpow.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1532791597,
+  "expire_in": 157680000,
+  "prev": "a85ac7da01051764aaeaf3dace1f753f4ce204419050696fd27331912e6a5f49",
+  "seqno": 23,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMNmAnicbVJbTFxFAF0KlkBKQeUDoxJ67SMQaO/7sYFIS20QpBIqDQjZ5T7mwnVx
+77J7F3azbCmtgIraKoStDaQiUGN41AJWiQpSaRODBQuoxaLhVU272yJFaTFanYv2
+xzg/k5k558w5Z2YkItgQHjS0aTzayfIPBY0O+5yGgsL6JA8iqJIbMXoQC1ifQKkE
+HJrZokiIEUExHKVIEkgiA0RZFHmGlSkMJwHJEIDBGVRCRRynMZbmOAyjCMDLGAt4
+jqZJQpBxCcNlGeWRRERWrMXAbrMrVg3KcgSQGR4DLMuxFMbwlCjSMs9KgoyKooyR
+DEWwNIbhkFiiOnQGNCfwDrBTUeEeXJjX7f0P/r5vFJNlnpBlgYYReIKkSYknCIbj
+KIaGnliUliVUkAAnoiQrcawA47GMjAE9rCgACV337VyXY0hURDmOIUmdx7KUIDEo
+TtG4gOOAxzgd6AB2K/8igGjVpimiTa1AvIkI3C1XRKAXqyf5D+KfODa7qqmiWgoP
+SjTN5jDqRM1t05EVQDD/q2EWFKsEa4SMcmB3KKoVMWIQKWqKLgrbxxkOozgmEQEu
+m2IHZkVHwLwsCod+DyiHkjxL8SIj8bAj2D1N8jx8NULiRYDJsEiZFAGOkiTGoRRK
+c7AmnCEIjMNwQPOUTOphHaDMqiJGnIA++WKo6VCKrbzmtAPEe364MMQQFG7Y+MAG
+/X8ZwsOi7v+6t6oj/7JsTqQaun0xV3JM+/P8VS0jKdPJT5IZpvTbXWsvr3xmyT/M
+jBw83XGg77rbEJEb3ESCt0dbb260xHy99HvqBUvszK3fLg189dKW1pbH2mKmow5F
+1ZcPx5eGP1vndc1JlZM7/5jeu0v7uKtowTUIkuisnLnu2LDhqf4LDR7ygyeiHEdM
+m858Oj2679Ga6OTBHZH+NucXxzIyTQz45KQ5f9U3VHan7ERRH+d2pM+erP828PiG
+54/M7/puoT0zrr7Di/q7Z4g713K39lSv1O5t4y4+PWPtattTF5+fWvjNlqXRo8XE
+jXdCQk//2Bwd39+btXggduJwyVx+dGjzoc6Ubcs/bOeuVk/gNVG3n2m8d+/9s9/P
+GY95M9Oye2oKXrncOJB6N+EcUvlTqbeDki69eTMlvWr78qu1XQMWz2rwyqmxIf+e
+ppEO5+Vf1B19eeTuBurzpBxT3IeKq/DBib7krKvpj9xKnGXdF4PDQmfHritz8SEd
+k5h4UCu8MaLJ84HzU0XNRG9d+3iBzx2kthSsiVdqDXJ2IEIMmFKa4lYjNw923s3+
+db6SyH2NTjjX+Hqry1g6WfDR0bD64/t/nqpaXFyb3Bbi87+A1/0Z6Fl+rndoPKhz
+qarkrH/wzPGKUCnN5xr1eDK4tKW4FXwsYWnhVN6Jp758t2U3u9p7LWdf/9aowMPv
+vRFo/xuYNscX
+=O8Hr
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/opticpow
+
+==================================================================
